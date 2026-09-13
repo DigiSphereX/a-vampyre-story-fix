@@ -58,6 +58,14 @@ Or via PowerShell:
 - Release build **v2.87.4**, SHA256 `74AEB464D829DB80E3F4AA8FAE235E6E3B38FC01188776C5C2376BB0DEA0956E`
   (re-verified before extraction every time).
 
+## Disclaimer / Backup advice
+
+Use this fix at your own risk. Before applying it: read the scripts (everything here
+is plain, readable source), **back up** the game folder / `ddraw.dll` you replace,
+and create a system restore point. A fix that works on most machines can behave
+unexpectedly on a specific setup. The author is not responsible for any
+unintentional damage or data loss.
+
 ## License
 
 MIT - see [LICENSE](LICENSE). dgVoodoo2 remains the property of its author and
