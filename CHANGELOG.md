@@ -1,0 +1,5 @@
+# Changelog
+
+All notable changes to this project are documented here.
+
+The format is loosely based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
