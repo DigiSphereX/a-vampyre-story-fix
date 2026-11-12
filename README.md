@@ -1,12 +1,21 @@
 # A Vampyre Story - Fix and Play
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-0070BA)](https://www.paypal.com/donate/?hosted_button_id=CFANQH892RPH2)
+[![License: MIT](https://img.shields.io/badge/License-MIT-informational.svg?style=for-the-badge)](LICENSE)
+[![Release](https://img.shields.io/badge/Release-v1.0.0-brightgreen.svg?style=for-the-badge)](https://github.com/DigiSphereX/a-vampyre-story-fix/releases/latest)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-0070BA.svg?style=for-the-badge)](https://www.paypal.com/donate/?hosted_button_id=CFANQH892RPH2)
 
 Makes the 2008 **Panda3D** release of *A Vampyre Story* playable on modern
 Windows (10/11). Fixes both the **start-up hang** (DirectX9 driver mismatch)
 and the **black screen after clicking "New Game"**.
 
-## Root cause
+## Download
+
+Get the latest release from
+[github.com/DigiSphereX/a-vampyre-story-fix/releases/latest](https://github.com/DigiSphereX/a-vampyre-story-fix/releases/latest),
+download `a-vampyre-story-fix.zip` and extract it. The fixer must sit in the
+game's `game` folder, next to `main.exe`.
+
+## The Problem
 
 - `main.exe` is a `py2exe` stub on **Panda3D 1.3.2** (Python 2.4 era).
 - The engine's DirectX9 renderer (`pandadx9`) spins the CPU at 100% on current
@@ -18,7 +27,7 @@ and the **black screen after clicking "New Game"**.
   the **dgVoodoo2** wrapper (Direct3D -> D3D11/D3D12), emulating a legacy
   "GeForce FX 5700 Ultra" device.
 
-## What the script does
+## The Fix
 
 1. **`etc\Config.prc`** - forces the DirectX9 renderer (`load-display pandadx9`).
 2. **dgVoodoo2 wrapper** - installs local `D3D8/D3D9/D3DImm/DDraw.dll`.
@@ -70,7 +79,7 @@ unintentional damage or data loss.
 
 ## License
 
-MIT - see [LICENSE](LICENSE). dgVoodoo2 remains the property of its author and
+MIT — see [LICENSE](LICENSE). dgVoodoo2 remains the property of its author and
 is distributed under its own terms.
 
 ---
@@ -79,5 +88,5 @@ is distributed under its own terms.
 
 Free and open source (MIT). If this project saved you time or money, consider a small thank-you:
 
-- **GitHub Sponsors** -> https://github.com/sponsors/DigiSphereX
-- **PayPal** -> https://www.paypal.com/donate/?hosted_button_id=CFANQH892RPH2
+- [GitHub Sponsors](https://github.com/sponsors/DigiSphereX)
+- [PayPal](https://www.paypal.com/donate/?hosted_button_id=CFANQH892RPH2)
